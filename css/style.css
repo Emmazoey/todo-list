@@ -1,0 +1,176 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+  background-color: #eee;
+}
+
+.main{
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  max-width: 840px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+.title{
+  font-weight: 500;
+  font-size: 24px;
+}
+input{
+  outline: none;
+}
+
+.btn{
+  cursor: pointer;
+}
+
+.active{
+  padding: 4px;
+  background-color: #3f72af;
+  color:#f9f7f7;
+}
+
+
+
+/* 配色方案 https://colorhunt.co/palette/22272 */
+
+/* search */
+
+.search_input {
+  margin-top: 30px;
+  position: relative;
+}
+.search_input_right {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  border-radius: 50%;
+  line-height: 28px;
+  background-color: #3f72af;
+  color:#f9f7f7;
+}
+.search_input_left {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  color: #3f72af;
+}
+.search_input_text {
+  width: 100%;
+  padding: 0 52px;
+  box-sizing: border-box;
+  height: 52px;
+  border-radius: 26px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #212832;
+  border: 0px;
+}
+
+
+/* search_option */
+
+.search_option{
+  margin-top:10px;
+  float: left;
+  margin-left:30px
+}
+.search_option span{
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+/* search_result */
+
+.search_result{
+  z-index: 1;
+  /* width: 80%; */
+  max-width: 840px;
+  margin: 42px auto 0;
+  padding: 0 0 20px;
+}
+
+.result_list{
+  overflow: hidden;
+  max-width: 840px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.editContent{
+	margin: 0;
+	width: 100%;
+	line-height: 1.4em;
+  font-size: 16px;
+	padding: 2px;
+	border: 1px solid #999;
+}
+
+/* result-block  */
+.result_block{
+  padding: 10px 100px 10px 50px;
+  overflow: hidden;
+  border-bottom:1px #eee solid;
+}
+
+.result_block .left, .result_block .content, .result_block .right{
+  float: left;
+  position: relative;
+}
+
+.result_block .left{
+  width: 50px;
+  left:-50px;
+}
+
+.result_block .content{
+  width:100%;
+  margin-left: -50px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.isFinish{
+  text-decoration:line-through;
+}
+
+.result_block .right{
+  width: 60px;
+  left:120px;
+  margin-left: -100px;
+  margin-top:2px;
+  background-color: #3f72af;
+  color:#f9f7f7;
+  padding: 2px;
+}
+
+/* hover渐变 */
+.result_block:hover{
+  background-image: linear-gradient( 135deg, #dbe2ef 30%, white 100%);
+}
+

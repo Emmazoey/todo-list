@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Todo List</title>
+  <script src="./js/vue.min.js"></script>
+  <script src="./js/index.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fonts/iconfont.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="main">
+      <div class="title">My Todo List</div>
+      <div class="search_input">
+        <div class="search_input_left icon iconfont icon-search"></div>
+        <div class="search_input_textContainer">
+          <input
+            @keyup.enter="addItem()"
+            type="text"
+            placeholder="搜索/回车或右侧添加"
+            id="search_input"
+            class="search_input_text"
+            v-model="inputText"
+          />
+          <div @click="addItem" class="search_input_right icon iconfont icon-add btn"></div>
+          <!-- 绑定 添加按钮 -->
+        </div>
+    </div>
+      
+    <div class="search_option">
+      <span @click="changeOption('all')" :class="{active : showOption == 'all'}">全部</span>
+      <span @click="changeOption('finish')" :class="{active : showOption == 'finish'}">以完成</span>
+      <span @click="changeOption('noFinish')" :class="{active : showOption == 'noFinish'}">未完成</span>
+    </div>
+
+    <div class="search_result">
+      <div class="result_list">
+
+        <div class="result_block" v-for="(item) in filteredList" :key="item.id">
+          <div class="left">
+            <input type="checkbox" v-model="item.isFinish">
+          </div>
+          <div class="content" v-bind:class="{isFinish: item.isFinish }">
+            <p @dblclick="toEdit(item)" v-show="!(editItem === item)">{{item.content}}</p>
+            <input
+            class="editContent"
+            type="text"
+            v-show="item === editItem"
+            v-model="item.content"
+            v-item-focus="item === editItem"
+            @blur="doneEdit(item)"
+            @keyup.enter="doneEdit(item)"
+          />
+          </div>
+          <div class="right btn" @click="delItem(item)"><span>删除</span></div>
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{
+  "id": "2267077",
+  "name": "wechat-book",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6275362",
+      "name": "添加",
+      "font_class": "icon-test",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "660538",
+      "name": "right",
+      "font_class": "i-right",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "10561567",
+      "name": "Cancel, control",
+      "font_class": "Cancelcontrol",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "15616875",
+      "name": "enter",
+      "font_class": "enter",
+      "unicode": "e870",
+      "unicode_decimal": 59504
+    },
+    {
+      "icon_id": "1393759",
+      "name": "search",
+      "font_class": "search",
+      "unicode": "e71f",
+      "unicode_decimal": 59167
+    }
+  ]
+}
